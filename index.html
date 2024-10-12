@@ -84,20 +84,35 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-              <strong>Embodied intelligence</STRONG> is considered one of the possible approaches toward artificial general intelligence (AGI), which focuses on the ability to perceive first-view data from the world and make decisions adaptively based on the feedback received. We first <strong>review</strong> advances in LLM agent-based embodied intelligence and provide resources and future directions for research and development.
-           </p>
-            <p>
-               Then, we propose a comprehensive benchmark <strong>platform</strong> and agents powered by large pre-trained models in complex urban environment. This platform includes a simulator and datasets for evaluating five representative tasks of embodied intelligence in urban environments, focusing on scene understanding, reasoning, and decision-making.
-            </p>
-          <p>
-            Within this benchmark, we delve into two <strong>critical embodied tasks</strong>. The first task is vision-and-
-              language navigation (VLN), where an agent navigates following human language instructions.
-              Traditional VLN agents, which perform well in indoor environments using navigation graphs, struggle
-              in 3D continuous urban spaces. To address this, we introduce <strong>CityNav</strong>, a <strong>city-level VLN</strong> agent that employs semantic map-based spatial reasoning and a topological memory graph for robust navigation in urban environments. CityNav constructs a 3D local semantic map, utilizes LLMs for common-sense reasoning, and records navigable locations in a memory graph, significantly enhancing navigation performance.
-          </p>
-          <p>
-              The second key task is <strong>location-goal embodied navigation</strong>, particularly relevant to drone delivery
-              systems in urban settings. We present <strong>DeliverGPT</strong>, an agent powered by large pre-trained models, featuring modules for perception, planning, motion, and memory. DeliverGPT builds a semantic graph for spatial understanding and uses a memory mechanism to improve delivery efficiency. Experimental results demonstrate a substantial performance improvement over existing methods, showcasing the effectiveness of integrating semantic graphs and memory mechanisms in drone-based navigation tasks.
+Embodied artificial intelligence (EmbodiedAI) emphasizes the role of an agent’s
+body in generating human-like behaviors. The recent efforts on EmbodiedAI pay
+a lot of attention to building up machine learning models to possess perceiving,
+planning, and acting abilities, thereby enabling real-time interaction with the world.
+However, most works focus on bounded indoor environments, such as navigation
+in a room or manipulating a device, with limited exploration of embodying the
+agents in open-world scenarios. That is, embodied intelligence in the open and
+outdoor environment is less explored, for which one potential reason is the lack
+of high-quality simulators, benchmarks, and datasets. To address it, in this paper,
+we construct a benchmark platform for embodied intelligence evaluation in real-
+world city environments. Specifically, we first construct a highly realistic 3D
+simulation environment based on the real buildings, roads, and other elements
+in a real city. In this environment, we combine historically collected data and
+simulation algorithms to conduct simulations of pedestrian and vehicle flows with
+high fidelity. Further, we designed a set of evaluation tasks covering different
+EmbodiedAI abilities. Moreover, we provide a complete set of input and output
+interfaces for access, enabling embodied agents to easily take task requirements and
+current environmental observations as input and then make decisions and obtain
+performance evaluations. On the one hand, it expands the capability of existing
+embodied intelligence to higher levels. On the other hand, it has a higher practical
+value in the real world and can support more potential applications for artificial
+general intelligence. Based on this platform, we evaluate some popular large
+language models for embodied intelligence capabilities of different dimensions and
+difficulties. The executable program of this platform is available for download, and
+we have also released an easy-to-use Python library and detailed tutorial documents.
+All of the software, Python library, codes, datasets, tutorials, and real-time online
+service are available on this anonymous website: <a href="https://embodied-ai.
+city">https://embodied-ai.
+city</a>.
           </p>
 
         </div>
